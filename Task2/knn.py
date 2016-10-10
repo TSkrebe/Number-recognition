@@ -24,8 +24,8 @@ def find_class(indices):
 
 
 def knn(k=1, n=100, train_data=train_features, test_data=test_features):
-    test_data = test_data[:,:n]
-    train_data = train_data[:,:n]
+    test_data = test_data[:, :n]
+    train_data = train_data[:, :n]
     true_results = []
     for p, feature in enumerate(test_data):
         dist = cdist(train_data, [feature], 'euclidean')
@@ -43,8 +43,8 @@ def knn(k=1, n=100, train_data=train_features, test_data=test_features):
 def knn_classification_confusion(k=1, n=100):
     con_m = confusion_matrix(test_classes, knn(k, n))
     precision = np.sum(con_m.diagonal())/float(np.sum(con_m))
-    print "Precision: {}".format(precision)
-    print con_m
+    print("Precision: {}".format(precision))
+    print(con_m)
 
 
-#knn_classification_confusion(10)
+knn_classification_confusion(10)

@@ -9,9 +9,9 @@ def apply_pca(matrix):
 
     X_PCA = matrix.dot(E2)
 
-    print "2 eigenvalues:", EVal[:2]
-    print "5 rows of E2:\n", E2[:5,:]
-    print "5 rows of X_PCA:\n", X_PCA[:5,:]
+    print("2 eigenvalues:", EVal[:2])
+    print("5 rows of E2:\n", E2[:5,:])
+    print("5 rows of X_PCA:\n", X_PCA[:5,:])
 
     return X_PCA
 

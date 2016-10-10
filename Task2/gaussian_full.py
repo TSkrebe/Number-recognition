@@ -23,9 +23,9 @@ def gaussian_full(features=100, train_data=train_features, test_data=test_featur
         means.append(mean(class_data))
         covariances.append(cov_matrix(class_data))
 
-    print "Determinants:"
+    print("Determinants:")
     for ind, c in enumerate(covariances):
-        print ind+1, np.linalg.det(c)
+        print(ind+1, np.linalg.det(c))
 
     predictions = []
     for feature in test_data:
@@ -42,8 +42,8 @@ def log_gaussian(x, m, c):
 def full_gaussian_classification_confusion(n=100):
     con_m = confusion_matrix(test_classes, gaussian_full(n))
     precision = np.sum(con_m.diagonal())/float(np.sum(con_m))
-    print "Precision: {}".format(precision)
-    print con_m
+    print("Precision: {}".format(precision))
+    print(con_m)
 
 
-#full_gaussian_classification_confusion()
+full_gaussian_classification_confusion()

@@ -11,7 +11,9 @@ def show_scatter_plot():
     import scipy.io
     data = scipy.io.loadmat('svhn.mat')
     train_classes = data['train_classes'][0]
+
     train_features = data['train_features']
+
     colors = ['yellow', 'violet', 'green', 'oldLace', 'black', 'brown', 'orange', 'blue', 'gray', 'red']
     X_PCA = apply_pca(train_features)
     for i, c in enumerate(colors):

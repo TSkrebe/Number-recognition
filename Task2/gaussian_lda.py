@@ -23,7 +23,7 @@ def gaussian_lda(features=100, train_data=train_features, test_data=test_feature
         means.append(mean(class_data))
         covariance += cov_matrix(class_data)
     covariance /= 10
-    print "Determinant: {}".format(np.linalg.det(covariance))
+    print("Determinant: {}".format(np.linalg.det(covariance)))
 
     predictions = []
     for feature in test_data:
@@ -41,8 +41,8 @@ def discriminant(x, m, c):
 def lda_gaussian_classification_confusion(n=100):
     con_m = confusion_matrix(test_classes, gaussian_lda(n))
     precision = np.sum(con_m.diagonal())/float(np.sum(con_m))
-    print "Precision: {}".format(precision)
-    print con_m
+    print("Precision: {}".format(precision))
+    print(con_m)
 
 #lda_gaussian_classification_confusion()
 
