@@ -1,0 +1,25 @@
+apply_pca():
+
+2 eigenvalues [ 14.55606051  11.52319788]
+5 rows of E2
+[[ 0.00897703  0.12595201]
+ [ 0.10713756  0.05442521]
+ [-0.05553495  0.1155426 ]
+ [ 0.07305884 -0.1210169 ]
+ [ 0.01768294  0.11018595]]
+5 rows of X_PCA
+[[ 5.69437513  3.60079859]
+ [ 5.52297389  1.43001254]
+ [ 0.90013833 -1.39092447]
+ [ 2.00892143 -1.23451795]
+ [ 4.33154391  1.68367736]]
+
+-------------------------------------------------------------------------
+show_cumulative_variance():
+
+Around first 10 components are necessary to explain 90% of variance.
+
+5)Based on the analysis above, describe your  ndings and discuss how they might relate to the digit classi-
+ cation in Task2.  For higher marks, you would need to run further analysis and give decent discussions,
+e.g.   nd two other PCA eigenvectors for which the projected features are also well separated with respect
+to their corresponding classes, and produce a similar scatter plot this time using these features.
